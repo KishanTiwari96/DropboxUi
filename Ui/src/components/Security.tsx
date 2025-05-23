@@ -56,31 +56,31 @@ export default function Security() {
             </div>
           </div>
 
-          <div className="flex flex-row justify-center items-center mt-12">
-
-            <div className="flex flex-col ">
+          <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-12 md:ml-35">
+            {/* Left column: Only show on md and up */}
+            <div className="hidden md:flex flex-col">
               <img
                 src="/Security1.webp"
                 alt="Image 1"
-                className="w-36 h-40  shadow-lg object-cover relative z-20 -mb-8"
+                className="w-36 h-40 shadow-lg object-cover relative z-20 -mb-8 rounded-xl"
               />
               <img
                 src="/Security4.webp"
                 alt="Image 4"
-                className="w-36 h-48  shadow-lg object-cover "
+                className="w-36 h-48 shadow-lg object-cover rounded-xl"
               />
             </div>
-
-            <div className="relative flex flex-row items-center min-w-[350px]">
+            {/* Right column: Photo 2 only on md+, Photo 3 always, but position changes */}
+            <div className="relative flex flex-col items-center w-full md:flex-row md:items-center md:min-w-[350px]">
               <img
                 src="/Security2.webp"
                 alt="Image 2"
-                className="h-104 w-80 shadow-lg object-cover"
+                className="hidden md:block h-104 w-80 shadow-lg object-cover rounded-xl"
               />
               <img
                 src="/Security3.webp"
                 alt="Image 3"
-                className="h-96 w-96 shadow-lg object-contain absolute left-24 bottom-0 z-30 bg-white"
+                className="h-60 w-60 sm:h-80 sm:w-80 md:h-96 md:w-96 shadow-lg object-contain bg-white rounded-xl mt-6 md:mt-0 md:absolute  left-1/2 md:left-24 bottom-0 z-30 transform md:-translate-x-0"
               />
             </div>
           </div>
@@ -114,29 +114,29 @@ export default function Security() {
       </div>
 
       <div className="mt-16 text-center">
-        <h2 className="text-lg font-semibold text-gray-400 mb-6">
-          Trusted by the biggest companies in the world
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {[
-            "Mary Kay",
-            "McLaren",
-            "Sundance Film Festival",
-            "Wag!",
-            "Figma",
-            "Greenhouse",
-            "Hydro Flask",
-            "Jamf",
-          ].map((company, index) => (
-            <div
-              key={index}
-              className="bg-gray-800 text-gray-300 px-4 py-2 rounded-md"
-            >
-              {company}
-            </div>
-          ))}
-        </div>
+  <h2 className="text-lg font-semibold text-gray-400 mb-6 ">
+    Trusted by the biggest companies in the world
+  </h2>
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 justify-items-center px-4 sm:px-8 md:px-16">
+    {[
+      "Mary Kay",
+      "McLaren",
+      "Sundance Film Festival",
+      "Wag!",
+      "Figma",
+      "Greenhouse",
+      "Hydro Flask",
+      "Jamf",
+    ].map((company, index) => (
+      <div
+        key={index}
+        className="bg-gray-800 text-gray-300 px-4 py-2 rounded-md text-sm sm:text-base w-full text-center"
+      >
+        {company}
       </div>
+    ))}
+  </div>
+</div>
     </div>
   );
 };

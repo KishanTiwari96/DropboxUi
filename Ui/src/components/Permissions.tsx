@@ -23,27 +23,25 @@ export default function ProtectContentSection() {
             <ArrowRight className="ml-2" />
           </button>
         </div>
-
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-8">
-          <video
-            ref={videoRef}
-            className="rounded-xl mb-8 md:mb-0"
-            width="550"
-            onMouseEnter={() => videoRef.current?.play()}
-            onMouseLeave={() => videoRef.current?.pause()}
-            muted
-            loop
-          >
-            <source src="/video.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="relative rounded-xl overflow-hidden shadow-xl w-full md:w-[650px] h-auto">
+          <div className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
+            <video
+              ref={videoRef}
+              className="rounded-xl w-full h-auto mb-8 md:mb-0"
+              onMouseEnter={() => videoRef.current?.play()}
+              onMouseLeave={() => videoRef.current?.pause()}
+              muted
+              loop
+            >
+              <source src="/video.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="relative rounded-xl overflow-hidden shadow-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto">
             <img
               src="/permission2.webp"
               alt="Admin Console UI"
-              width={650}
-              height={200}
-              className="rounded-xl"
+              className="rounded-xl w-full h-auto"
             />
           </div>
         </div>

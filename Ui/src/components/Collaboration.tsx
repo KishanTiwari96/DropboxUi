@@ -29,25 +29,21 @@ export default function Collaboration() {
         </div>
 
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-6">
-          <div className="relative rounded-xl overflow-hidden shadow-xl w-full md:w-[650px] h-auto">
-            <img
-              src="/Collaboration1.webp"
-              alt="Dropbox Share UI"
-              width={650}
-              height={400}
-              className="rounded-xl"
-            />
-          </div>
-          <div className="hidden md:block w-full md:w-[400px] h-auto">
-            <img
-              src="/Collaboration2.webp"
-              alt="Team Collaboration"
-              width={400}
-              height={400}
-              className="rounded-xl object-cover"
-            />
-          </div>
-        </div>
+  <div className="relative rounded-xl overflow-hidden shadow-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl h-auto">
+    <img
+      src="/Collaboration1.webp"
+      alt="Dropbox Share UI"
+      className="rounded-xl w-full h-auto object-contain"
+    />
+  </div>
+  <div className="hidden md:block w-full max-w-xs sm:max-w-md md:max-w-sm lg:max-w-md h-auto">
+    <img
+      src="/Collaboration2.webp"
+      alt="Team Collaboration"
+      className="rounded-xl w-full h-auto object-cover"
+    />
+  </div>
+</div>
       </div>
     </section>
   );

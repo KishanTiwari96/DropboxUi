@@ -32,22 +32,18 @@ export default function Content() {
         </div>
 
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-6">
-          <div className="relative rounded-xl overflow-hidden shadow-xl w-full md:w-[650px] h-auto">
+          <div className="relative rounded-xl overflow-hidden shadow-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl h-auto">
             <img
               src="/content1.webp"
               alt="Dropbox UI"
-              width={650}
-              height={400}
-              className="rounded-xl"
+              className="rounded-xl w-full h-auto object-contain"
             />
           </div>
-          <div className="hidden md:block w-full md:w-[400px] h-auto">
+          <div className="hidden md:block w-full max-w-xs sm:max-w-md md:max-w-sm lg:max-w-md h-auto">
             <img
               src="/content2.webp"
               alt="Race Car"
-              width={400}
-              height={400}
-              className="rounded-xl object-cover"
+              className="rounded-xl w-full h-auto object-cover"
             />
           </div>
         </div>
