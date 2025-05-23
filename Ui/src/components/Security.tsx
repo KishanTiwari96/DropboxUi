@@ -57,7 +57,6 @@ export default function Security() {
           </div>
 
           <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-12 md:ml-35">
-            {/* Left column: Only show on md and up */}
             <div className="hidden md:flex flex-col">
               <img
                 src="/Security1.webp"
@@ -70,7 +69,6 @@ export default function Security() {
                 className="w-36 h-48 shadow-lg object-cover rounded-xl"
               />
             </div>
-            {/* Right column: Photo 2 only on md+, Photo 3 always, but position changes */}
             <div className="relative flex flex-col items-center w-full md:flex-row md:items-center md:min-w-[350px]">
               <img
                 src="/Security2.webp"
