@@ -1,5 +1,6 @@
 import { ArrowRight, LockIcon } from "lucide-react"
 import { useRef } from "react";
+import Reveal from "./Reveal";
 
 export default function ProtectContentSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -23,8 +24,10 @@ export default function ProtectContentSection() {
             <ArrowRight className="ml-2" />
           </button>
         </div>
+       
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-8">
-          <div className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
+           <Reveal>
+            <div className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
             <video
               ref={videoRef}
               className="rounded-xl w-full h-auto mb-8 md:mb-0"
@@ -37,6 +40,8 @@ export default function ProtectContentSection() {
               Your browser does not support the video tag.
             </video>
           </div>
+          </Reveal>
+          <Reveal>
           <div className="relative rounded-xl overflow-hidden shadow-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto">
             <img
               src="/permission2.webp"
@@ -44,7 +49,9 @@ export default function ProtectContentSection() {
               className="rounded-xl w-full h-auto"
             />
           </div>
+          </Reveal>
         </div>
+        
       </div>
     </section>
   );
